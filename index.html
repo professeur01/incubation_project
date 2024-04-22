@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Formulaire d'inscription à l'Incuation des Projets"
+    />
+    <meta name="author" content="Codeloccol" />
+    <title>Codeloccol | Formulaire d'Incubation de Projet</title>
+
+    <!-- Favicons-->
+    <link
+      rel="shortcut icon"
+      href="img/LOGO-CODELOCCOL-FAV.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="img/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- GOOGLE WEB FONT -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/vendors.css" rel="stylesheet" />
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- MODERNIZR MENU -->
+    <!-- <script src="js/modernizr.js"></script> -->
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Preload -->
+
+    <!--  <div id="loader_form">
+      <div data-loader="circle-side-2"></div>
+    </div> -->
+    <!-- /loader_form -->
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <a href="index.html"
+              ><img
+                src="img/Codeloccol.png"
+                alt="nom logo codeloccol"
+                width="178"
+                height="45"
+                class="d-none d-md-block" /><img
+                src="img/Codeloccol2 (1).png"
+                alt="tag logo codeloccol"
+                width="62"
+                height="45"
+                class="d-block d-md-none"
+            /></a>
+          </div>
+          <div class="col-9">
+            <div id="social">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/codeloccol"
+                    ><i class="icon-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/codeloccol"
+                    ><i class="icon-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/codeloccol/"
+                    ><i class="icon-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/codeloccol/"
+                    ><i class="icon-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /social -->
+            <a href="#0" class="cd-nav-trigger"
+              >Menu<span class="cd-icon"></span
+            ></a>
+            <!-- /menu button -->
+            <nav>
+              <ul class="cd-primary-nav">
+                <li>
+                  <a href="index.html" class="animated_link"
+                    >Retour au formulaire</a
+                  >
+                </li>
+                <li>
+                  <a href="instructions.html" class="animated_link"
+                    >Instructions</a
+                  >
+                </li>
+                <li>
+                  <a href="contacts.html" class="animated_link"
+                    >Contactez-nous</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <!-- /menu -->
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+    </header>
+    <!-- /Header -->
+
+    <div class="container">
+      <div id="form_container">
+        <div class="row no-gutters hello">
+          <div class="col-lg-4">
+            <div id="left_form">
+              <figure>
+                <img
+                  class="png-bus"
+                  src="img/Starting a business project-amico.png"
+                  alt="png bus"
+                  width="100"
+                  height="100"
+                  loading="lazy"
+                />
+              </figure>
+              <h2>Formulaire d'Incubation de Projet<span>CODELOCCOL</span></h2>
+              <a
+                href="charte.html"
+                class="btn_1 rounded yellow purchase"
+                target="_parent"
+                >Notre charte</a
+              >
+              <a href="charte.html" class="btn_1 rounded mobile_btn yellow"
+                >Notre charte</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div id="wizard_container">
+              <div id="top-wizard">
+                <div id="progressbar"></div>
+                <span id="location"></span>
+              </div>
+              <!-- /top-wizard -->
+              <form
+                name="submit-to-google-sheet"
+                id="wrapped"
+                novalidate
+                class="form needs-validation"
+              >
+                <div class="step step-1 active">
+                  <h3 class="main_question pad">
+                    <i class="arrow_right"></i>Veuillez fournir vos informations
+                    personnelles
+                  </h3>
+
+                  <div class="form-group add_top_30">
+                    <label for="prenom">Prénom</label>
+                    <input
+                      type="text"
+                      name="prenom"
+                      id="prenom"
+                      class="form-control"
+                      autocomplete="given-name"
+                      minlength="3"
+                      required
+                      title="Veuillez saisir un prénom valide"
+                    />
+                  </div>
+                  <div class="form-group add_top_30">
+                    <label for="nom">Nom</label>
+                    <input
+                      type="text"
+                      name="nom"
+                      id="nom"
+                      class="form-control"
+                      autocomplete="given-name"
+                      minlength="3"
+                      required
+                      title="Veuillez saisir un nom valide"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="mail">Adresse E-mail</label>
+                    <input
+                      type="email"
+                      name="mail"
+                      id="mail"
+                      class="form-control"
+                      required
+                      pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                      title="Veuillez entrer une adresse mail valide"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="telephone">Mobile (whatsapp)</label>
+                    <input
+                      type="tel"
+                      name="telephone"
+                      id="telephone"
+                      class="form-control"
+                      pattern="^\+227\d{8}$"
+                      placeholder="+22712345678"
+                      required
+                      minlength="12"
+                      maxlength="12"
+                      title="Veuillez entrer un numero valide ( +227 NUMERO)"
+                      autocomplete="tel"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="adresse_physique">Adresse physique</label>
+                    <input
+                      type="text"
+                      name="adresse_physique"
+                      id="adresse_physique"
+                      class="form-control"
+                      autocomplete="given-name"
+                      minlength="3"
+                      required
+                      title="Veuillez saisir une adresse physique valide"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input
+                      type="number"
+                      name="age"
+                      id="age"
+                      class="form-control"
+                      required
+                      min="13"
+                      title="Entrez un âge valide"
+                      autocomplete=""
+                    />
+                  </div>
+                  <div class="div_next_prev">
+                    <button type="button" class="next-btn">Suivant</button>
+                  </div>
+                </div>
+                <!--    ===========Fin step 1============== -->
+
+                <div class="step step-2">
+                  <h3 class="main_question pad">
+                    <i class="arrow_right"></i>Renseignez les informations sur
+                    votre projet
+                  </h3>
+                  <div class="form-group">
+                    <label for="secteur_activite"
+                      >Secteur d'activité professionnelle</label
+                    >
+                    <select
+                      name="secteur_activite"
+                      id="secteur_activite"
+                      class="form-control"
+                      title="Veuillez choisir au moins une option"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Votre secteur d'activité professionnelle
+                      </option>
+                      <option value="sport">
+                        Agriculture Elévage et pêche
+                      </option>
+                      <option value="art">Ameublement</option>
+                      <option value="lecture">Automobile - Services</option>
+                      <option value="bénévolat">Art (artisanat)</option>
+                      <option value="cuisine">Armée de terre</option>
+                      <option value="technologie">
+                        Alimentaire (la filière)
+                      </option>
+                      <option value="technologie">
+                        Banque | Assurance | Immobilier
+                      </option>
+                      <option value="technologie">Bâtiment</option>
+                      <option value="technologie">
+                        Commerce | Vente et grande distribution
+                      </option>
+                      <option value="technologie">
+                        Communication | Média et multimédia
+                      </option>
+                      <option value="technologie">
+                        Construction | Bâtiment et travaux publics
+                      </option>
+                      <option value="musique">
+                        Hôtellerie/Restauration | Tourisme | Loisirs...
+                      </option>
+                      <option value="technologie">Industrie</option>
+                      <option value="technologie">
+                        Installation et maintenance
+                      </option>
+                      <option value="technologie">Numérique</option>
+                      <option value="technologie">Presse</option>
+                      <option value="technologie">Santé</option>
+                      <option value="technologie">Télécommunications</option>
+                      <option value="technologie">
+                        Transport et logistique
+                      </option>
+                      <option value="technologie"></option>
+                      <!-- Ajoutez d'autres options selon vos besoins -->
+                    </select>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="raison_creation_startup"
+                      >Pourquoi avez-vous décidé de créer votre startup ?
+                      (Veuillez fournir une réponse détaillé)</label
+                    >
+                    <textarea
+                      name="raison_creation_startup"
+                      id="raison_creation_startup"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Pourquoi avez-vous décidé de créer votre startup ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="probleme_identifier"
+                      >Quelle problème avez-vous identifiez ?</label
+                    >
+                    <textarea
+                      name="probleme_identifier"
+                      id="probleme_identifier"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Quelle problème avez-vous identifiez ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="solution_qui_se_demarque"
+                      >En quoi votre solution se démarque t'elle ?</label
+                    >
+                    <textarea
+                      name="solution_qui_se_demarque"
+                      id="solution_qui_se_demarque"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="En quoi votre solution se démarque t'elle ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="pourquoi_votre_idee_est_bonne"
+                      >Pourquoi pensez-vous que votre idée est bonne ?</label
+                    >
+                    <textarea
+                      name="pourquoi_votre_idee_est_bonne"
+                      id="pourquoi_votre_idee_est_bonne"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Pourquoi pensez-vouz que votre idée est bonne ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="strategie_mise_en_oeuvre"
+                      >Quelle est votre stratégie générale pour mettre en oeuvre
+                      votre solution ?</label
+                    >
+                    <textarea
+                      name="strategie_mise_en_oeuvre"
+                      id="strategie_mise_en_oeuvre"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Quelle est votre stratégie générale pour mettre en oeuvre votre solution ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="moyen_acquerir_clients"
+                      >Comment prévoyez-vous acquérir des clients/utilisateurs
+                      ?</label
+                    >
+                    <textarea
+                      name="moyen_acquerir_clients"
+                      id="moyen_acquerir_clients"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Comment prévoyez-vous acquérir des clients/utilisateurs ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="mission_specifique"
+                      >Quelle mission spécifique avez-vous fixée pour votre
+                      projet ?</label
+                    >
+                    <textarea
+                      name="mission_specifique"
+                      id="mission_specifique"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Quelle mission spécifique avez-vous fixée pour votre projet ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="contribution_environnemental"
+                      >Comment pensez-vous que votre solution va contribuer à
+                      votre environnement au cours des 10 prochanes années
+                      ?</label
+                    >
+                    <textarea
+                      name="contribution_environnemental"
+                      id="contribution_environnemental"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Comment pensez-vous que votre solution va contribuer à votre environnement au cours des 10 prochanes années ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="resultat_escomptes"
+                      >Quels sont les résultats escomptés à long terme ?</label
+                    >
+                    <textarea
+                      name="resultat_escomptes"
+                      id="resultat_escomptes"
+                      class="form-control"
+                      required
+                      maxlength="700"
+                      title="Pas plus de 700 mots"
+                      placeholder="Quels sont les résultats escomptés à long terme ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="engagement_vie"
+                      >Êtes-vous prêt à consacrer les 10 prochaines années de
+                      votre vie à la réussite de ce projet ?</label
+                    >
+                    <textarea
+                      name="engagement_vie"
+                      id="engagement_vie"
+                      class="form-control"
+                      required
+                      maxlength="500"
+                      title="Pas plus de 500 mots"
+                      placeholder="Êtes-vous prêt à consacrer les 10 prochaines années de votre vie à la réussite de ce projet ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="gerer_defis"
+                      >Comment envisagez-vous de gérer les défis et les
+                      changements inévitables au fil du temps ?</label
+                    >
+                    <textarea
+                      name="gerer_defis"
+                      id="gerer_defis"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Comment envisagez-vous de gérer les défis et les changements inévitables au fil du temps ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="div_next_prev">
+                    <button type="button" class="previous-btn">
+                      Précedent
+                    </button>
+                    <button type="button" class="next-btn">Suivant</button>
+                  </div>
+                </div>
+
+                <!--    ===========Fin step 2============== -->
+
+                <div class="step step-3">
+                  <div class="form-group" id="radio-other_div">
+                    <label class="autre" for="engagement_communautaire"
+                      >Avez-vous une expérience bénévole ou d'engagement
+                      communautaire ?</label
+                    >
+                    <textarea
+                      name="engagement_communautaire"
+                      id="engagement_communautaire"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Avez-vous une expérience bénévole ou d'engagement communautaire ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="passe_temps"
+                      >Quels sont vos passe-temps et intérêts en dehors de votre activité professionnelle ?</label
+                    >
+                    <input
+                      type="text"
+                      name="passe_temps"
+                      id="passe_temps"
+                      class="form-control"
+                      autocomplete="given-name"
+                      minlength="3"
+                      required
+                      title="Veuillez saisir un secteur activité valide"
+                    />
+                  </div>
+                  <div class="form-group" id="radio-other_div">
+                    <label
+                      class="autre"
+                      for="activite_extra_pro_influence_entrepreunariat"
+                      >Comment vos activités extra-professionnelles
+                      influencent-elles votre approche entrepreneuriale ?</label
+                    >
+                    <textarea
+                      name="activite_extra_pro_influence_entrepreunariat"
+                      id="activite_extra_pro_influence_entrepreunariat"
+                      class="form-control"
+                      required
+                      maxlength="800"
+                      title="Pas plus de 700 mots"
+                      placeholder="Comment vos activités extra-professionnelles influencent-elles votre approche entrepreneuriale ?"
+                      autocomplete="off"
+                    ></textarea>
+                  </div>
+
+                  <div class="div_accepte">
+                    <p class="ecrit">
+                      En soumettant ce formulaire,j'accepte que les informations
+                      saisies soient exploitées dans le cadre de la formation et
+                      de la relation commerciale qui peut en découler.
+                    </p>
+                  </div>
+                  <div class="ligne_polit_confi">
+                    <div class="form-group">
+                      <input
+                        class="check"
+                        type="checkbox"
+                        name="donneePersonnel"
+                        id="donneePersonnel"
+                        value="Accepter"
+                        required
+                        title="Veuillez accepter la Politique de confidentialité (vous pouvez la consulté en cliquant dessus)"
+                      />
+                      <label class="form-check-label" for="donneePersonnel">
+                        Accepter<span
+                          class="P-confid"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                          la Politique de confidentialité
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="div_prev_inscrire" id="">
+                    <button type="button" class="previous-btn">
+                      Précedent
+                    </button>
+                    <button type="submit" name="" class="btn_submit">
+                      S'inscrire
+                    </button>
+                  </div>
+                </div>
+                <!--    ===========Fin step 3============== -->
+              </form>
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        X
+                      </button>
+                    </div>
+                    <img
+                      class="img_doc"
+                      src="./doc/Politique-PDP-Codeloccol.jpg/5a198f32429dc7e3c1cfcbb0148069b8-0.jpg"
+                      alt="page politique de confidentialité"
+                      loading="lazy"
+                    />
+                    <img
+                      class="img_doc"
+                      src="./doc/Politique-PDP-Codeloccol.jpg/5a198f32429dc7e3c1cfcbb0148069b8-1.jpg"
+                      alt="page politique de confidentialité"
+                      loading="lazy"
+                    />
+                    <img
+                      class="img_doc"
+                      src="./doc/Politique-PDP-Codeloccol.jpg/5a198f32429dc7e3c1cfcbb0148069b8-2.jpg"
+                      alt="page politique de confidentialité"
+                      loading="lazy"
+                    />
+                    <img
+                      class="img_doc"
+                      src="./doc/Politique-PDP-Codeloccol.jpg/5a198f32429dc7e3c1cfcbb0148069b8-3.jpg"
+                      alt="page politique de confidentialité"
+                      loading="lazy"
+                    />
+                    <img
+                      class="img_doc"
+                      src="./doc/Politique-PDP-Codeloccol.jpg/5a198f32429dc7e3c1cfcbb0148069b8-4.jpg"
+                      alt="page politique de confidentialité"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- /Fin Wizard container -->
+            <!--  Checkbox------------------------- -->
+
+            <!-- Div radio -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="container">
+      <footer id="home" class="clearfix">
+        <p>© 2024 Codeloccol</p>
+        <ul>
+          <li>
+            <a href="wwww.codeloccol.org" class="animated_link"
+              >Codeloccol.org</a
+            >
+          </li>
+          <li>
+            <a href="instructions.html" class="animated_link">Instructions</a>
+          </li>
+          <li>
+            <a href="contacts.html" class="animated_link">Contactez-nous</a>
+          </li>
+        </ul>
+      </footer>
+      <!-- Fin footer-->
+    </div>
+    <!-- /Fin container -->
+
+    <div class="cd-overlay-nav">
+      <span></span>
+    </div>
+    <!-- /cd-overlay-nav -->
+    <div class="cd-overlay-content">
+      <span></span>
+    </div>
+    <!-- /cd-overlay-content -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.8.22.min.js"></script>
+    <script src="js/jquery.wizard.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/common_functions.js"></script>
+    <!-- Wizard script-->
+    <!--  SCRIPT POST SHEET -->
+
+    <!--  SCRIPT POST SHEET FIN-->
+    <!--script src="js/jquery-1.11.0.min.js" type="text/javascript"></script-->
+    <script src="js/bootstrap-select.min.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+
+    <script src="js/index.js"></script>
+    <!-- DEBUT -->
+    <script src="model/user.js"></script>
+    <script src="connect.js"></script>
+
+    <!-- //////////// -->
+
+    <!--    FIN -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    /* (() => {
+      "use strict";
+      const form = document.querySelector(".needs-validation");
+
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    })(); */
+  </script>
+</html>
