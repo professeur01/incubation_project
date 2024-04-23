@@ -64,7 +64,7 @@ app.post("/submit-form", (req, res) => {
     gerer_defis: req.body.gerer_defis,
     engagement_communautaire: req.body.engagement_communautaire,
     passe_temps: req.body.passe_temps,
-    pro_influence_entrepreunariat: req.body.pro_influence_entrepreunariat,
+    activite_extra_pro_influence_entrepreunariat: req.body.activite_extra_pro_influence_entrepreunariat,
     donneePersonnel: req.body.donneePersonnel,
     // Ajoutez d'autres champs selon les données de votre formulaire
   });

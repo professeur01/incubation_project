@@ -231,7 +231,7 @@
                     />
                   </div>
                   <div class="form-group">
-                    <label for="mail">Adresse E-mail</label>
+                    <label for="mail">email@address.com</label>
                     <input
                       type="email"
                       name="mail"
@@ -555,7 +555,7 @@
                     <label for="passe_temps"
                       >Quels sont vos passe-temps et intérêts en dehors de votre activité professionnelle ?</label
                     >
-                    <input
+                    <textarea
                       type="text"
                       name="passe_temps"
                       id="passe_temps"
@@ -564,7 +564,7 @@
                       minlength="3"
                       required
                       title="Veuillez saisir un secteur activité valide"
-                    />
+                    ></textarea>
                   </div>
                   <div class="form-group" id="radio-other_div">
                     <label
@@ -618,7 +618,7 @@
                     <button type="button" class="previous-btn">
                       Précedent
                     </button>
-                    <button type="submit" name="" class="btn_submit">
+                    <button type="submit" name="" class="btn_submit" disabled>
                       S'inscrire
                     </button>
                   </div>
@@ -728,9 +728,7 @@
     <script src="js/velocity.min.js"></script>
     <script src="js/common_functions.js"></script>
     <!-- Wizard script-->
-    <!--  SCRIPT POST SHEET -->
-
-    <!--  SCRIPT POST SHEET FIN-->
+ 
     <!--script src="js/jquery-1.11.0.min.js" type="text/javascript"></script-->
     <script src="js/bootstrap-select.min.js"></script>
     <!-- <script src="js/index.js"></script> -->
@@ -755,21 +753,6 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    /* (() => {
-      "use strict";
-      const form = document.querySelector(".needs-validation");
-
-      form.addEventListener(
-        "submit",
-        (event) => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated");
-        },
-        false
-      );
-    })(); */
+   
   </script>
 </html>

@@ -124,12 +124,6 @@ function getVals(formControl, controlType) {
       $("#secteur_activite_field").text(value);
       break;
 
-      case "activite_extra_pro_field":
-      // Get the value for date input
-      var value = $(formControl).val();
-      $("#activite_extra_pro_field").text(value);
-      break;
-
     case "raison_creation_startup_field":
       // Get the value for phone input
       var value = $(formControl).val();
@@ -195,6 +189,12 @@ function getVals(formControl, controlType) {
       var value = $(formControl).val();
       $("#gerer_defis_field").text(value);
       break;
+      
+      case "activite_extra_pro_influence_entrepreunariat_field":
+      // Get the value for date input
+      var value = $(formControl).val();
+      $("#activite_extra_pro_influence_entrepreunariat_field").text(value);
+      break;
 
     case "donneePersonnel_field":
       // Get the value of the first radio button
@@ -206,6 +206,7 @@ function getVals(formControl, controlType) {
   }
 }
 
+const btnSubmit = document.querySelector(".btn_submit")
 const checkActive = document.querySelector(".check");
 const btncacher = document.querySelector(".cacher");
 
@@ -213,54 +214,17 @@ const btncacher = document.querySelector(".cacher");
 checkActive.addEventListener("click", () => {
   if (checkActive.checked) {
     console.log("checked");
+    btnSubmit.disabled = false;
     checkActive.checked = true;
     btncacher.style.display = "block";
   } else {
     console.log("unchecked");
+    btnSubmit.disabled = true;
     btncacher.style.display = "none";
   }
 });
 // -----------------------------Montrer la politique de Confidentialité------------------------------------
-// ... (votre JavaScript existant) ...
-/* 
-document.addEventListener("DOMContentLoaded", function () {
-  const steps = Array.from(document.querySelectorAll("form .step"));
-  const nextBtn = document.querySelectorAll("form .next-btn");
-  const prevBtn = document.querySelectorAll("form .previous-btn");
 
-  nextBtn.forEach((button) => {
-    button.addEventListener("click", () => {
-      changeStep("next");
-    });
-  });
-
-  prevBtn.forEach((button) => {
-    button.addEventListener("click", () => {
-      changeStep("prev");
-    });
-  });
-
-  function changeStep(btn) {
-    let index = 0;
-    const active = document.querySelector(".step.active");
-
-    if (active) {
-      index = steps.indexOf(active);
-      steps[index].classList.remove("active");
-
-      if (btn === "next") {
-        index++;
-      } else if (btn === "prev") {
-        index--;
-      }
-    }
-
-    if (index >= 0 && index < steps.length) {
-      steps[index].classList.add("active");
-    }
-  }
-});
- */
 document.addEventListener("DOMContentLoaded", function () {
   const steps = Array.from(document.querySelectorAll("form .step"));
   const nextBtn = document.querySelectorAll("form .next-btn");

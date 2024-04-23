@@ -2284,7 +2284,15 @@ button.previous-btn {
 #wizard_container {
   padding: 30px;
 }
+.fl-form label.fl-label {
+  font-size: 9px;
 }
+}
+@media (max-width: 375px) {
+  .fl-form.fl-style-1 .fl-is-active textarea.fl-textarea {
+    padding: 18px 16px 0 16px;
+  }
+  }
 @media (max-width: 320px) {
   button.previous-btn {
     padding: 7px 15px;
@@ -2295,7 +2303,12 @@ button.previous-btn {
   .h4_inscrip{
     font-size: 13px;
   }
+  .fl-form.fl-style-1 .fl-is-active textarea.fl-textarea {
+    padding: 23px 16px 0 16px;
+  }
 }
+
+
 /* =================================Multiple step END============================ */
 .div_prev_inscrire{
   width: 100% !important;
