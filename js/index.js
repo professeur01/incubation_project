@@ -1,3 +1,5 @@
+import { SERVER_ADRESS } from "../env.js";
+
 /*  Wizard */
 jQuery(function ($) {
   "use strict";
@@ -88,11 +90,11 @@ function getVals(formControl, controlType) {
       $("#prenom_field").text(value);
       break;
 
-      case "nom_field":
-        // Get the value for input
-        var value = $(formControl).val();
-        $("#nom_field").text(value);
-        break;
+    case "nom_field":
+      // Get the value for input
+      var value = $(formControl).val();
+      $("#nom_field").text(value);
+      break;
 
     case "mail_field":
       // Get the value for input
@@ -189,8 +191,8 @@ function getVals(formControl, controlType) {
       var value = $(formControl).val();
       $("#gerer_defis_field").text(value);
       break;
-      
-      case "activite_extra_pro_influence_entrepreunariat_field":
+
+    case "activite_extra_pro_influence_entrepreunariat_field":
       // Get the value for date input
       var value = $(formControl).val();
       $("#activite_extra_pro_influence_entrepreunariat_field").text(value);
@@ -206,10 +208,9 @@ function getVals(formControl, controlType) {
   }
 }
 
-const btnSubmit = document.querySelector(".btn_submit")
+const btnSubmit = document.querySelector(".btn_submit");
 const checkActive = document.querySelector(".check");
 const btncacher = document.querySelector(".cacher");
-
 
 checkActive.addEventListener("click", () => {
   if (checkActive.checked) {
@@ -235,7 +236,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isStepValid()) {
         changeStep("next");
       } else {
-        alert("Veuillez remplir tous les champs obligatoires avant de passer à l'étape suivante.");
+        alert(
+          "Veuillez remplir tous les champs obligatoires avant de passer à l'étape suivante."
+        );
       }
     });
   });
@@ -267,28 +270,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function isStepValid() {
-    const requiredFields = Array.from(document.querySelectorAll(".step.active input[required], .step.active select[required], .step.active textarea[required]"));
+    const requiredFields = Array.from(
+      document.querySelectorAll(
+        ".step.active input[required], .step.active select[required], .step.active textarea[required]"
+      )
+    );
     return requiredFields.every((field) => field.value.trim() !== "");
   }
 });
 
 //_______________________ Saisir un nombre negatif____________________
-const formElement = document.querySelector('#wrapped')
-const apiUrl = 'http://localhost:3000/submit-form'
+const formElement = document.querySelector("#wrapped");
+const apiUrl = SERVER_ADRESS + '/submit-form';
 
-formElement.addEventListener('submit', function (event) { 
+formElement.addEventListener("submit", function (event) {
+  console.log({ apiUrl });
+
   event.preventDefault();
   //input, select, textarea
-  const inputsElements = formElement.querySelectorAll('input');
-  const selectsElements = formElement.querySelectorAll('select');
-  const textareasElements = formElement.querySelectorAll('textarea');
+  const inputsElements = formElement.querySelectorAll("input");
+  const selectsElements = formElement.querySelectorAll("select");
+  const textareasElements = formElement.querySelectorAll("textarea");
 
   const values = {};
 
-  [...inputsElements, ...selectsElements, ...textareasElements].forEach(el => {
-    const name = el.getAttribute('name')
-    values[name] = el.value
-  });
+  [...inputsElements, ...selectsElements, ...textareasElements].forEach(
+    (el) => {
+      const name = el.getAttribute("name");
+      values[name] = el.value;
+    }
+  );
   console.log(values);
   fetch(apiUrl, {
     method: "POST",
@@ -297,14 +308,17 @@ formElement.addEventListener('submit', function (event) {
     },
     body: JSON.stringify(values),
   })
-  .then(res => {
-    
-    window.location.href = `${window.location.origin}/thanks.html`;
-    console.log(res);
-  })
-  .catch(err => {console.log(err);});
- })
+    .then((res) => {
+      if (res.ok) {
+        window.location.href = `${window.location.origin}/thanks.html`;
+        console.log(res);
+      } else {
+        console.log(err);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
- // :::::::::::::::::::::::::::Confettie loading::::::::::::::::::
-
-
+// :::::::::::::::::::::::::::Confettie loading::::::::::::::::::
