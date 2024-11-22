@@ -1,1 +1,1 @@
-export const SERVER_ADRESS = "http://localhost:4000"
+export const SERVER_ADRESS = "https://formulaire-incubation-back-end.onrender.com"
